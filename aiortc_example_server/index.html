@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC demo</title>
+    <style>
+    video {
+        width: 100%;
+    }
+
+    #media {
+        max-width: 1280px;
+        display: block;
+    }
+
+    #video {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(255, 0, 0, 0.05);
+    }
+    </style>
+</head>
+<body>
+
+<div id="media">
+    <canvas id="canvas"></canvas>
+    <video id="video" autoplay playsinline onresize="on_video_resize(this)"></video>
+</div>
+
+<script src="client.js"></script>
+</body>
+</html>
